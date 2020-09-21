@@ -12,6 +12,8 @@ def addseller(request):
 def View(request):
     return render(request,'seller/view.html')
 
+    
+# here the code with image upload
 def insertseller(request):
     u_password = randint(100, 999)  # randint is inclusive at both ends
     if request.method=='POST':
