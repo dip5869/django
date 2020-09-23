@@ -28,3 +28,5 @@ def insertseller(request):
         # user = Tbl_user.objects.create(u_name=u_name,u_email=u_email,u_phno=u_phno,u_address=u_address,u_gst=u_gst,u_panno=u_panno,u_servicetaxno=u_servicetaxno,u_documents=u_documents,u_password=u_password,u_role='Seller',u_status='Active')
         # user.save()
         # return HttpResponse('<h1><script>alert("Seller Added Successfully.");window.location.href = "View";</script></h1>')
+
+#new branch
