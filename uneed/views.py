@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 from .models import *
 from random import randint
+from .forms import *
 
 # Create your views here.
 def index(request):
@@ -30,5 +31,19 @@ def insertseller(request):
         # return HttpResponse('<h1><script>alert("Seller Added Successfully.");window.location.href = "View";</script></h1>')
 
 #new branch
+def insert_seller(request):
+    if request.method=='POST':
+        form=Tbl_User_Form(request.POST,request.FILES)
+        if form.is_valid():
+            f=form.save(commit=False)
+            f.u_password=randint(100,999)
+            f.save()
+            return HttpResponse("data added")
+        else:
+            return HttpResponse("Something wrong")
 
+    else:
+        form=Tbl_User_Form()
+
+    return render(request,'seller/add.html',{'form':form})
 

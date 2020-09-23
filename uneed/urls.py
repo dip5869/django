@@ -7,6 +7,9 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('addseller',views.addseller,name='addseller'),
     path('insertseller',views.insertseller,name='insertseller'),
+    path('insert/seller',views.insert_seller,name='insert_seller'),
+    
+
     ]
 
 if settings.DEBUG:
