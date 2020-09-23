@@ -30,3 +30,5 @@ def insertseller(request):
         # return HttpResponse('<h1><script>alert("Seller Added Successfully.");window.location.href = "View";</script></h1>')
 
 #new branch
+
+
